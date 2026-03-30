@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-400: #FBBF24;
+  --color-gold-500: #F59E0B;
+  --color-gold-600: #D97706;
+  
+  --color-studio-950: #050505;
+  --color-studio-900: #121212;
+  --color-studio-800: #1E1E1E;
+  --color-studio-700: #2D2D2D;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+body {
+  background-color: var(--color-studio-950);
+  color: #F3F4F6;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-studio-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-studio-800);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-studio-700);
+}
+
+/* Hide scrollbar for horizontal scrolling lists but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
